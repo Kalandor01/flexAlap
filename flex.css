@@ -1,0 +1,66 @@
+
+@charset "utf-8";
+
+header, article, nav {
+    border: solid 1px black;
+    padding: 5px;
+}
+
+header {
+    background: indianred;
+}
+
+/*gyerekelem*/
+article {
+    background: lightgray;
+    /*flex grow, flex shrink, width*/
+    flex: 1 1 200px;
+}
+
+/*szülőelem*/
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: center;*/
+    gap: 10px;
+}
+
+article:nth-child(1) {
+    order: 1;
+}
+
+article:nth-child(6) {
+    order: 2;
+}
+
+/*menü*/
+nav a {
+    text-decoration: none;
+    display: block;
+}
+
+#listaval ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#divekkel .menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#listaval, #divekkel{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:600px) {
+    section {
+        flex-direction: column;
+    }
+}
